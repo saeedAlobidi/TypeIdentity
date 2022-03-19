@@ -28,7 +28,7 @@
     "express": "^4.17.3",
     "i": "^0.3.7",
     "npm": "^8.5.3",
-    "type-identity": "^1.0.0",
+    "type-identity": "^1.0.2",
     "typeorm": "^0.3.0"
   }
 }

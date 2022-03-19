@@ -1,15 +1,15 @@
 
 
 
-import IDbConstraint from "type-identity/TypeIdenitiy/Core/DbConstraints/IDbConstraint";
-import IdentityRoleClaims from "type-identity/TypeIdenitiy/Entity/IdentityRoleClaims";
-import RoleManager from "type-identity/TypeIdenitiy/Idenitiy/Builder/RoleManager";
-import UserManager from "type-identity/TypeIdenitiy/Idenitiy/Builder/UserManager";
-import SignManager from "type-identity/TypeIdenitiy/Idenitiy/Builder/SignManager";
-import IdentityRoles from "type-identity/TypeIdenitiy/Entity/IdentityRoles";
-import TypeIdentity from "type-identity/TypeIdenitiy/Idenitiy/Builder/TypeIdentity";
+import IDbConstraint from "type-identity/Core/DbConstraints/IDbConstraint";
+import IdentityRoleClaims from "type-identity/Entity/IdentityRoleClaims";
+import RoleManager from "type-identity/Idenitiy/Builder/RoleManager";
+import UserManager from "type-identity/Idenitiy/Builder/UserManager";
+import SignManager from "type-identity/Idenitiy/Builder/SignManager";
+import IdentityRoles from "type-identity/Entity/IdentityRoles";
+import TypeIdentity from "type-identity/Idenitiy/Builder/TypeIdentity";
 import CustomUser from "../modal/CustomUser";
-import IdentityUserClaims from "type-identity/TypeIdenitiy/Entity/IdentityUserClaims";
+import IdentityUserClaims from "type-identity/Entity/IdentityUserClaims";
 
 
 

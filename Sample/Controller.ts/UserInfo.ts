@@ -1,7 +1,7 @@
 
 
-import { AuthorizeType } from "type-identity/TypeIdenitiy/Idenitiy/Services/AuthorizeServices";
-import { Authorize } from "type-identity/TypeIdenitiy/Core/Annotation/Authorize";
+import { AuthorizeType } from "type-identity/Idenitiy/Services/AuthorizeServices";
+import { Authorize } from "type-identity/Core/Annotation/Authorize";
 export default class UserInfo{
 
     @Authorize(AuthorizeType.Roles,"admin")

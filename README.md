@@ -11,11 +11,9 @@ beta release
 To deploy this project run
 
 ```bash
-<<<<<<< HEAD
-  npm run  type-identity
-=======
+ 
   npm run   type-identity
->>>>>>> 40b41c1bc50000ac6d260bd0563d9ecf10cc3788
+
 ```
 
 
@@ -379,9 +377,11 @@ app.listen(port, () => {
 
 
 ## 🔗 Links
-[![portfolio](https://github.com/saeedAlobidi)](https://katherinempeterson.com/)
-[![linkedin](https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/)](https://www.linkedin.com/)
-[![twitter](https://twitter.com/SAEED1MOHAMMED4)](https://twitter.com/)
+ 
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/SAEED1MOHAMMED4)
+
+
 
 
 ## Authors
