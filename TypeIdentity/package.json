@@ -1,0 +1,42 @@
+{
+  "name": "cls",
+  "version": "1.0.0",
+  "description": "node.js typescript cleam architecture ",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "start": "ts-node Test/test.ts",
+    "build": "tsc",
+    "migration": "typeorm migration:create -n PostRefactoring",
+    "run_migration": "typeorm migration:run",
+    "run_migration_2": "ts-node migration.ts",
+    "db_first": "typeorm-model-generator -h localhost -d test_asp_Core_5 -u mms -x mms -e mssql -o ./Domain/Entities -s dbo"
+  },
+  "author": "saeed mohammed alabidi /saeed1adm@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.8",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typeorm-model-generator": "^0.4.6",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "annotation-exception-handlers": "^1.0.10",
+    "automapper-ts": "^1.9.0",
+    "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.3",
+    "firebase-admin": "^10.0.1",
+    "i18next": "^21.5.3",
+    "moment": "^2.29.1",
+    "mssql": "^7.2.1",
+    "multer": "^1.4.2",
+    "tsyringe": "^4.6.0",
+    "typeorm": "^0.2.41"
+  }
+}
