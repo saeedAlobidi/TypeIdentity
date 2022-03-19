@@ -5,64 +5,17 @@ Type Identity is a powerful and highly customizable authentication and authrozat
 beta release
 
 
-## Documentation
-
-
-[Documentation](https://linktodocumentation)
-The following contains a description of all future that Type Identity Provide.
-
-
-1- create type Identity entity migration 
-
-2- create type Identity user and allow you create your customize entity 
-
-3- create type Identity Roles  and allow you create your customize entity 
-
-4- create type Identity Permission  and allow you create your customize entity 
-
-5- create type Identity  and allow you create your customize entity 
-
-6- signIn & signout  type Identity allow you sign user and create identity in easy way
-
-7- annotation method and middlerware check  Permission and Roles
-
-
-
-
-
-![Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png)
-
-
-## Documentation
-
-
-[Documentation](https://linktodocumentation)
-The following contains a description of all future that Type Identity Provide.
-
-1- create type Identity entity migration 
-
-2- create type Identity user and allow you create your customize entity 
-
-3- create type Identity Roles  and allow you create your customize entity 
-
-4- create type Identity Permission  and allow you create your customize entity 
-
-5- create type Identity  and allow you create your customize entity 
-
-6- signIn & signout  type Identity allow you sign user and create identity in easy way
-
-7- annotation method and middlerware check  Permission and Roles
-
-
-
-
 
 ## Deployment
 
 To deploy this project run
 
 ```bash
+<<<<<<< HEAD
   npm run  type-identity
+=======
+  npm run   type-identity
+>>>>>>> 40b41c1bc50000ac6d260bd0563d9ecf10cc3788
 ```
 
 
