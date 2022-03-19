@@ -62,7 +62,7 @@ The following contains a description of all future that Type Identity Provide.
 To deploy this project run
 
 ```bash
-  npm run  TypeIdenitiy
+  npm run   type-identity
 ```
 
 
