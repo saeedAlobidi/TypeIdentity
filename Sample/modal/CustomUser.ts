@@ -1,12 +1,12 @@
-import Roles from "cls/TypeIdenitiy/Core/Entities/Roles";
-import UserClaims from "cls/TypeIdenitiy/Core/Entities/UserClaims";
-import UserLogins from "cls/TypeIdenitiy/Core/Entities/UserLogins";
-import Users from "cls/TypeIdenitiy/Core/Entities/Users";
-import UserTokens from "cls/TypeIdenitiy/Core/Entities/UserTokens";
-import IdentityRoles from "cls/TypeIdenitiy/Entity/IdentityRoles";
-import IdentityUserClaims from "cls/TypeIdenitiy/Entity/IdentityUserClaims";
-import IdentityUserLogins from "cls/TypeIdenitiy/Entity/IdentityUserLogins";
-import IdentityUserTokens from "cls/TypeIdenitiy/Entity/IdentityUserTokens";
+import Roles from "type-identity/TypeIdenitiy/Core/Entities/Roles";
+import UserClaims from "type-identity/TypeIdenitiy/Core/Entities/UserClaims";
+import UserLogins from "type-identity/TypeIdenitiy/Core/Entities/UserLogins";
+import Users from "type-identity/TypeIdenitiy/Core/Entities/Users";
+import UserTokens from "type-identity/TypeIdenitiy/Core/Entities/UserTokens";
+import IdentityRoles from "type-identity/TypeIdenitiy/Entity/IdentityRoles";
+import IdentityUserClaims from "type-identity/TypeIdenitiy/Entity/IdentityUserClaims";
+import IdentityUserLogins from "type-identity/TypeIdenitiy/Entity/IdentityUserLogins";
+import IdentityUserTokens from "type-identity/TypeIdenitiy/Entity/IdentityUserTokens";
 import { Column, Entity } from "typeorm";
 
 

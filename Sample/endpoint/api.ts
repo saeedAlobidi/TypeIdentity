@@ -1,7 +1,7 @@
 import UserInfo from "../Controller.ts/UserInfo";
 import { initTypeIdentity, signIn, signOut } from "../Services/main";
 
-const bodyParser = require('body-parser');//this required
+
 const cors = require('cors');//this required
 var cookieParser = require('cookie-parser')//this required
 const express = require('express')//this required
