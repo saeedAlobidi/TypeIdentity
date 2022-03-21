@@ -44,7 +44,7 @@ export class dbConfig extends IDbConstraint {
 //this step is not required but if you want to change cookies configuration such as name etc...
 export class customCookiesConfig extends CookiesConfiguration{
 
-    name="saeed@"; //cookies name
+    name="saeed2022"; //cookies name
     loginPage="/login"; //unauthorize  redirect page
     successfullyPage="https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/" //success Page
 }
@@ -408,3 +408,4 @@ Saeed Mohammed Al-abidi
 saeed1adm@gmail.com
 l woud description my self as some one who interesting on building software and frameworks, starting from Design & Architecture, up to implementation and test
 
+                    
