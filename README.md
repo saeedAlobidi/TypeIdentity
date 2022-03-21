@@ -274,9 +274,9 @@ export default class UserInfo{
   
     }
 
-    @Authorize(AuthorizeType.Roles,"quest")
+    @Authorize(AuthorizeType.Roles,"guest")
     quest(req, res){
-      res.send('is Authorize to go as  quest')
+      res.send('is Authorize to go as  guest')
     }
   }
 
@@ -346,7 +346,7 @@ app.get('/quest', async (req, res) => {
  * any one have write Policy
  */
 
-app.get('/quest', async (req, res) => {
+app.get('/guest', async (req, res) => {
     new UserInfo().write(req, res)
 })
 
