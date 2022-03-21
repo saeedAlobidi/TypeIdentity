@@ -11,8 +11,8 @@ class DI {
     constructor() {
         this._DbConstraint = DbConstraint_1.default;
         this._DbContext = DbContext_1.default;
-        this.CookieModal = CookiesModel_1.CookiesModel;
-        this.CookiesConfiguration = CookiesModel_1.IdentityCookiesConfiguration;
+        this._CookieModal = CookiesModel_1.CookiesModel;
+        this._CookiesConfiguration = CookiesModel_1.IdentityCookiesConfiguration;
     }
     /**
     *  Databse Constraint
@@ -38,8 +38,8 @@ class DI {
      * @return void
      */
     seCookiesConfig(CookieModal, CookiesConfiguration) {
-        this.CookieModal = CookieModal;
-        this.CookiesConfiguration = CookiesConfiguration;
+        this._CookieModal = CookieModal;
+        this._CookiesConfiguration = CookiesConfiguration;
         return this;
     }
     /**
@@ -54,10 +54,10 @@ class DI {
             useClass: this._DbContext
         }, { lifecycle: tsyringe_1.Lifecycle.Singleton });
         tsyringe_1.container.register("CookiesModel", {
-            useClass: this.CookieModal
+            useClass: this._CookieModal
         }, { lifecycle: tsyringe_1.Lifecycle.Singleton });
         tsyringe_1.container.register("CookiesConfiguration", {
-            useClass: this.CookiesConfiguration
+            useClass: this._CookiesConfiguration
         }, { lifecycle: tsyringe_1.Lifecycle.Singleton });
     }
 }

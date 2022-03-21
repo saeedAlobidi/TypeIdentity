@@ -65,7 +65,9 @@ export class AuthorizeServices implements IAuthorizeServices {
 
     @validate("iSAuthorize")
     iSAuthorize(): Boolean {
-        const encrptUserInfo = this.request.cookies[this.CookiesConfiguration.getName()]
+        const encrptUserInfo = this.getUserInfo()
+        if(encrptUserInfo==null)
+        return false;
         const userInfo = this.Encryption.decrypt(encrptUserInfo)
         return this.authorizeSType == AuthorizeType.Roles ? this.checkRoles(userInfo) : this.checkPolicy(userInfo)
     }
@@ -73,13 +75,19 @@ export class AuthorizeServices implements IAuthorizeServices {
 
     /** getUserInfo 
           *validate() this is library used instead of try and catch for more inf https://www.npmjs.com/package/annotation-exception-handlers 
-          * getUser from http context
-          * @param userInfo user information afte login that contain role and permission
+          * getUser from http context cookies or header 
          * @return new cookies modal value 
          */
 
-    @validate("checkRoles")
-    getUserInfo(userInfo) { return userInfo }
+    @validate("getUserInfo")
+    getUserInfo() { 
+        if(this.request.cookies[this.CookiesConfiguration.getName()]!=undefined)
+        return this.request.cookies[this.CookiesConfiguration.getName()]
+        if(this.request.headers[this.CookiesConfiguration.getName()]!=undefined)
+        return this.request.headers[this.CookiesConfiguration.getName()]
+        return null
+
+    }
 
 
     /** checkRoles 
@@ -90,9 +98,8 @@ export class AuthorizeServices implements IAuthorizeServices {
      */
 
     @validate("checkRoles")
-    checkRoles(userInfo) {
-        const inf = this.getUserInfo(userInfo)
-        return inf.user.RoleName.trim() == this.policyName.trim() ? true : false
+    checkRoles(userInfo) { 
+        return userInfo.user.RoleName.trim() == this.policyName.trim() ? true : false
     }
 
     /** checkPolicy 
@@ -103,8 +110,7 @@ export class AuthorizeServices implements IAuthorizeServices {
              */
     @validate("checkPolicy")
     checkPolicy(userInfo) {
-        const inf = this.getUserInfo(userInfo)
-        return inf.rolePermisstion.filter((policy) => policy.claimValue.trim() == this.policyName.trim());
+        return userInfo.rolePermisstion.filter((policy) => policy.claimValue.trim() == this.policyName.trim());
     }
 
 

@@ -46,8 +46,8 @@ class TypeIdentity {
       * @param CookieOption
       * @return new instance of type identity
       */
-    seCookiesConfig(CookieOption = (option) => { }) {
-        CookieOption({ "Cookie": this.CookiesModel, "config": this.CookiesConfiguration });
+    seCookiesConfig(CookiesConfiguration = CookiesModel_1.IdentityCookiesConfiguration) {
+        this.CookiesConfiguration = CookiesConfiguration;
         return this;
     }
     migrationConfig() {

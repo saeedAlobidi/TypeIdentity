@@ -1,8 +1,8 @@
 export default class DI {
     private _DbConstraint;
     private _DbContext;
-    private CookieModal;
-    private CookiesConfiguration;
+    private _CookieModal;
+    private _CookiesConfiguration;
     /**
     *  Databse Constraint
     * @param DbConstraint database constraint {name,password ..etc}

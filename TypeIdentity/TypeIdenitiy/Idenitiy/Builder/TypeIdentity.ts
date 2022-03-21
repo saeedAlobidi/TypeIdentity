@@ -4,7 +4,7 @@ import { CookiesModel, IdentityCookiesConfiguration } from "../../Core/Common/Co
 import DbConstraint from "../../Core/DbConstraints/DbConstraint";
 import Migration from "../Configuration/Migration";
 import DI from "./DI";
-
+import {IdentityTokenStorageType} from '../../Core/Common/IdentityToken'
 
 export default class TypeIdentity {
   /**
@@ -27,7 +27,6 @@ export default class TypeIdentity {
      * @return new instance of type identity
      */
 
-
   setDatabaseConfig = (dbConfig) => {
     this.dbConstraint = dbConfig
     return this
@@ -39,11 +38,13 @@ export default class TypeIdentity {
      * @param CookieOption  
      * @return new instance of type identity
      */
-  seCookiesConfig(CookieOption=(option)=>{}) {
-    CookieOption({ "Cookie": this.CookiesModel, "config": this.CookiesConfiguration })
+  seCookiesConfig(CookiesConfiguration=IdentityCookiesConfiguration) {
+    this.CookiesConfiguration=CookiesConfiguration;
     return this
   }
 
+
+  
   async migrationConfig() {
     await   Migration(container.resolve("DbConstraint"))
     return this

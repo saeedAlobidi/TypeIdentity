@@ -78,15 +78,17 @@ export default class SignInManagerServices<UsersEntity, RolesEntityClaimsEntity>
     const cookiesData = this.CookiesModel.builder().setUser(user)
       .setPermisstion(permisstions)
 
+      const userData=  this.Encryption.crypto(this.CookiesModel);
     this.response.cookie(
-      this.CookiesConfiguration.getName(),
-      this.Encryption.crypto(this.CookiesModel),
+      this.CookiesConfiguration.getName(),userData,
       {
         //Todo: expires: new Date(this.CookiesConfiguration.getExpires()),
         httpOnly: this.CookiesConfiguration.getHttpOnly(),
         secure: this.CookiesConfiguration.getSecure()
       })
-    this.response.status(200).redirect(this.CookiesConfiguration.getSuccessfullyPage());
+
+
+    this.response.header( this.CookiesConfiguration.getName(),userData).status(200).redirect(this.CookiesConfiguration.getSuccessfullyPage());
 
 
 

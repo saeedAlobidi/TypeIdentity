@@ -10,6 +10,7 @@ import IdentityRoles from "type-identity/Entity/IdentityRoles";
 import TypeIdentity from "type-identity/Idenitiy/Builder/TypeIdentity";
 import CustomUser from "../modal/CustomUser";
 import IdentityUserClaims from "type-identity/Entity/IdentityUserClaims";
+import { CookiesConfiguration } from "type-identity/Core/Common/CookiesModel";
 
 
 
@@ -33,9 +34,17 @@ export class dbConfig extends IDbConstraint {
 *2- initialize type identity framework database configuration (this step is required)
 */
 
+//this step is not required but if you want to change cookies configuration such as name etc...
+export class customCookiesConfig extends CookiesConfiguration{
+
+    name="saeed@"; //cookies name
+    loginPage="/login"; //unauthorize  redirect page
+    successfullyPage="https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/" //success Page
+}
 export async function initTypeIdentity() {
 
     new TypeIdentity()
+        .seCookiesConfig(customCookiesConfig) // note this section is if you want custmize your cookies data
         .setDatabaseConfig(dbConfig).build()
 }
 

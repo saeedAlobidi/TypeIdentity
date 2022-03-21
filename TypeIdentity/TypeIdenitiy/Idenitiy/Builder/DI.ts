@@ -7,28 +7,28 @@ export default class DI {
 
     private _DbConstraint = DbConstraint
     private _DbContext = DbContext
-    private CookieModal = CookiesModel
-    private CookiesConfiguration = IdentityCookiesConfiguration
+    private _CookieModal = CookiesModel
+    private _CookiesConfiguration = IdentityCookiesConfiguration
 
-    
-     /**
-     *  Databse Constraint 
-     * @param DbConstraint database constraint {name,password ..etc}
-     * @return void
-     */
+
+    /**
+    *  Databse Constraint 
+    * @param DbConstraint database constraint {name,password ..etc}
+    * @return void
+    */
 
     setDbConstraint(DbConstraint) {
         this._DbConstraint = DbConstraint
         return this
     }
 
- 
-     /**
-     * seDbContext
-     * @param DbContext  new instance of Database Context TypeOrm Library
-     * @return void
-     */
- 
+
+    /**
+    * seDbContext
+    * @param DbContext  new instance of Database Context TypeOrm Library
+    * @return void
+    */
+
     seDbContext(DbContext) {
         this._DbContext = DbContext
         return this
@@ -43,17 +43,17 @@ export default class DI {
 
     seCookiesConfig(CookieModal, CookiesConfiguration) {
 
-        this.CookieModal = CookieModal;
-        this.CookiesConfiguration = CookiesConfiguration
+        this._CookieModal = CookieModal;
+        this._CookiesConfiguration = CookiesConfiguration
         return this
     }
 
-   
 
-     /**
-     *  build dependency injection 
-     * @return void
-     */
+
+    /**
+    *  build dependency injection 
+    * @return void
+    */
     build() {
 
 
@@ -65,11 +65,11 @@ export default class DI {
             useClass: this._DbContext
         }, { lifecycle: Lifecycle.Singleton });
         container.register("CookiesModel", {
-            useClass: this.CookieModal
+            useClass: this._CookieModal
         }, { lifecycle: Lifecycle.Singleton });
 
         container.register("CookiesConfiguration", {
-            useClass: this.CookiesConfiguration
+            useClass: this._CookiesConfiguration
         }, { lifecycle: Lifecycle.Singleton });
 
     }

@@ -1,6 +1,6 @@
 {
   "name": "type-identity",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "description": "Type Identity is a powerful and highly customizable authentication and authrozation and access-control framework. It is the de-facto standard for securing Type Script api beta release",
   "scripts": {
     "test": "jest",

@@ -48,12 +48,13 @@ class SignInManagerServices extends GenericServices_1.default {
                 .setParameters({ roleId: user.RoleId }).getMany();
             const cookiesData = this.CookiesModel.builder().setUser(user)
                 .setPermisstion(permisstions);
-            this.response.cookie(this.CookiesConfiguration.getName(), this.Encryption.crypto(this.CookiesModel), {
+            const userData = this.Encryption.crypto(this.CookiesModel);
+            this.response.cookie(this.CookiesConfiguration.getName(), userData, {
                 //Todo: expires: new Date(this.CookiesConfiguration.getExpires()),
                 httpOnly: this.CookiesConfiguration.getHttpOnly(),
                 secure: this.CookiesConfiguration.getSecure()
             });
-            this.response.status(200).redirect(this.CookiesConfiguration.getSuccessfullyPage());
+            this.response.header(this.CookiesConfiguration.getName(), userData).status(200).redirect(this.CookiesConfiguration.getSuccessfullyPage());
         });
     }
     /** SignOutAsync

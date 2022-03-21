@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import { IdentityCookiesConfiguration } from "../../Core/Common/CookiesModel";
 export default class TypeIdentity {
     /**
        
@@ -20,7 +21,7 @@ export default class TypeIdentity {
       * @param CookieOption
       * @return new instance of type identity
       */
-    seCookiesConfig(CookieOption?: (option: any) => void): this;
+    seCookiesConfig(CookiesConfiguration?: typeof IdentityCookiesConfiguration): this;
     migrationConfig(): Promise<this>;
     build: () => void;
 }

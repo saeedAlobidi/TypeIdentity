@@ -1,19 +1,21 @@
 {
-  "name": "cls",
-  "version": "1.0.0",
-  "description": "node.js typescript cleam architecture ",
-  "main": "main.js",
+  "name": "type-identity",
+  "version": "1.2.0",
+  "description": "Type Identity is a powerful and highly customizable authentication and authrozation and access-control framework. It is the de-facto standard for securing Type Script api beta release",
   "scripts": {
     "test": "jest",
     "start": "ts-node Test/test.ts",
-    "build": "tsc",
-    "migration": "typeorm migration:create -n PostRefactoring",
-    "run_migration": "typeorm migration:run",
-    "run_migration_2": "ts-node migration.ts",
-    "db_first": "typeorm-model-generator -h localhost -d test_asp_Core_5 -u mms -x mms -e mssql -o ./Domain/Entities -s dbo"
+    "build": "tsc"
   },
   "author": "saeed mohammed alabidi /saeed1adm@gmail.com",
   "license": "ISC",
+"keywords": [
+    "Type Identity Framework"
+  ],
+ "repository": {
+    "type": "git",
+    "url": "https://github.com/saeedAlobidi/TypeIdentity"
+  },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^16.11.8",

@@ -41,8 +41,20 @@ export class dbConfig extends IDbConstraint {
 
 ```javascript
 
-   new TypeIdentity()
+//this step is not required but if you want to change cookies configuration such as name etc...
+export class customCookiesConfig extends CookiesConfiguration{
+
+    name="saeed@"; //cookies name
+    loginPage="/login"; //unauthorize  redirect page
+    successfullyPage="https://www.linkedin.com/in/saeed-mohammed-al-obidi-289082147/" //success Page
+}
+
+export async function initTypeIdentity() {
+
+    new TypeIdentity()
+        .seCookiesConfig(customCookiesConfig) // note this section  is dependency if you want custmize your cookies data
         .setDatabaseConfig(dbConfig).build()
+}
 
 
 ```
@@ -244,8 +256,8 @@ export default class CustomUser extends Users<IdentityUserClaims,IdentityUserLog
 
 
 
-import { AuthorizeType } from "cls/TypeIdenitiy/Idenitiy/Services/AuthorizeServices";
-import { Authorize } from "cls/TypeIdenitiy/Core/Annotation/Authorize";
+import { AuthorizeType } from "type-identity/Idenitiy/Services/AuthorizeServices";
+import { Authorize } from "type-identity/Core/Annotation/Authorize";
 export default class UserInfo{
 
     @Authorize(AuthorizeType.Roles,"admin")

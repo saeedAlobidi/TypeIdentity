@@ -17,14 +17,16 @@ initTypeIdentity()
 
 
 app.get('/signIn', async (req, res) => {
-    console.log('start')
+    
     await signIn(req, res)
+    console.log('signIn')
 })
 
 app.get('/signOut', async (req, res) => {
     signOut(req, res)
 })
 
+ 
 
 /**
  * this endpoint allow for admin if you try to go as guest you will get 401 

@@ -42,11 +42,10 @@ export declare class AuthorizeServices implements IAuthorizeServices {
     iSAuthorize(): Boolean;
     /** getUserInfo
           *validate() this is library used instead of try and catch for more inf https://www.npmjs.com/package/annotation-exception-handlers
-          * getUser from http context
-          * @param userInfo user information afte login that contain role and permission
+          * getUser from http context cookies or header
          * @return new cookies modal value
          */
-    getUserInfo(userInfo: any): any;
+    getUserInfo(): any;
     /** checkRoles
       *validate() this is library used instead of try and catch for more inf https://www.npmjs.com/package/annotation-exception-handlers
       * check Roles from http context sunch as  admin and superadmin
