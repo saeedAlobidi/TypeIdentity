@@ -12,7 +12,7 @@ To deploy this project run
 
 ```bash
  
-  npm run   type-identity
+  npm install type-identity
 
 ```
 
