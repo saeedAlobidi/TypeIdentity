@@ -150,7 +150,7 @@ export async function createUser() {
     const _user = new CustomUser()
     _user.name = "saeed mohammed alabidi"
     _user.userName = "saeed1adm@gmail.com"
-    _user.passwordHash = "Baru"
+    _user.passwordHash = "Master happy"
 
     const _user_manager = await new UserManager<CustomUser, IdentityUserClaims>().build()
     const vaue = await _user_manager.addAsync(_user)
