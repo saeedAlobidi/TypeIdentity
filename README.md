@@ -406,6 +406,6 @@ app.listen(port, () => {
 ## 🚀 About Me
 Saeed Mohammed Al-abidi
 saeed1adm@gmail.com
-l woud description my self as some one who interesting on building software and frameworks, starting from Design & Architecture, up to implementation and test
+l woud describe my self as some one who interested on building software and frameworks, starting from Design & Architecture, up to implementation and test
 
                     
